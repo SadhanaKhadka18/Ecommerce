@@ -1,5 +1,5 @@
-const Product = require("./newProduct").ProductModel;
-const Productclass = require("./newProduct").ProductClass;
+const Product = require("./Product").ProductModel;
+const Productclass = require("./Product").ProductClass;
 
 let count = 0;
 
@@ -23,7 +23,7 @@ class UserCart {
       this.product = await Product.findOne({ "id": this.productId });
       this.total = this.quantity * this.product.price;
       // console.log("product",this.product)
-       console.log("total",this.total)          
+      //  console.log("total",this.total)          
     } catch (error) {
       console.error("Error initializing product:", error);
     }
@@ -44,7 +44,7 @@ class UserCart {
       this.id = ++count;
       // this.product.sellProduct(this.quantity);
       userCarts.push(this);
-      // console.log(userCarts);
+      //  console.log(userCarts);
       return this;
     }
   }

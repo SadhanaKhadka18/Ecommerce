@@ -14,7 +14,7 @@ router.post("/",async (req, res) => {
     req.body.productId,
     req.body.quantity
   )
-  console.log(req.body)
+  // console.log(req.body)
   await createdCart.initializeProductAndTotal();
   
   createdCart.addToCart()

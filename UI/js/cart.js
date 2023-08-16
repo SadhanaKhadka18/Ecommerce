@@ -11,6 +11,7 @@ confirm.addEventListener("click", function () {
 });
 
 async function getCartItems(userId) {
+  // console.log("hereeeeee")
   let response = await fetch("http://localhost:3000/cart/" + userId);
   console.log("response",response);
   if (response.ok) {
@@ -27,6 +28,7 @@ async function getCartItems(userId) {
     // cartItems
     let element = "";
     json.forEach((item) => {
+      
       element += `
                     <div class="row border-top border-bottom p-3">
                         <div class="col-2"><img class="img-fluid cart-image" src="http://localhost:3000/products/image/${

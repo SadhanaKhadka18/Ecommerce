@@ -46,13 +46,16 @@ async function addToCart(productId, quantity) {
 }
 
 function handleMinus() {
+  console.log("input",inputQuantity);
   if (inputQuantity.value > 1) {
     inputQuantity.value = inputQuantity.value - 1;
     inputQuantity.textContent = inputQuantity.value;
   }
 }
 function handlePlus() {
+  console.log("hereeeeee")
   const max = inputQuantity.getAttribute("max");
+  console.log("max",max);
   if (inputQuantity.value < max) {
     const currentValue = parseInt(inputQuantity.value);
     inputQuantity.value = currentValue + 1;
