@@ -1,0 +1,72 @@
+.banner {
+  margin-top: 40px;
+  max-height: 450px;
+  overflow: hidden;
+}
+.banner img {
+  object-fit: cover;
+  height: 450px;
+}
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+.products-thumbnail {
+  max-height: 300px;
+  overflow: hidden;
+}
+.products-thumbnail img {
+  object-fit: cover;
+  height: 300px;
+}
+.thumbnail-image {
+  max-width: 600px;
+  max-height: 700px;
+}
+.thumbnail-image img {
+  object-fit: cover;
+  height: 600px;
+}
+
+#customForm input {
+  text-align: center;
+  border: 1px solid #6c757d;
+  max-width: 50px;
+}
+
+#customForm input[type="number"] {
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}
+
+#customForm input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#customForm .wrapper {
+  border: 2px #dcd3d3 solid;
+  /* width: 40vw; */
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  border-radius: 15px;
+}
+
+#customForm .plusminus {
+  height: 100%;
+  background: white;
+  border: none;
+  font-size: 30px;
+  color: #5f5fce;
+  line-height: 0;
+}
+
+#customForm .num {
+  height: 100%;
+  width: 39%;
+  border: none;
+  font-size: 30px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shopping Cart</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Shop Cart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/UI/pages/about-me.html">About</a></li>
+                </ul>
+                <div class="user mx-4">
+                    <div class="for-modal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form id="mainForm">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="alert alert-danger alert-dismissible fade show d-none"
+                                                role="alert" id="incorrect-password">
+                                                Incorrect email or password.
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputEmail" class="form-label">Email
+                                                    address</label> <input type="email" class="form-control"
+                                                    id="inputEmail" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputPassword" class="form-label">Password</label> <input
+                                                    type="password" class="form-control" id="inputPassword">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-user">
+                    </div>
+                </div>
+                <div class="d-flex" id="cart-icon">
+                    <a href="./pages/cart.html"><button class="btn btn-outline-dark">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cartCount"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/banner-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner-3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Product section-->
+    <div id="main-panel">
+        <div id="toast-container"></div>
+        <section class="py-5 d-none" id="descr">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6 product-detail">
+                        <div class="thumbnail-image">
+                            <img class="card-img-top mb-5 mb-md-0"
+                                src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="small mb-1">SKU: BST-498</div>
+                        <h1 class="display-5 fw-bolder name-element"></h1>
+                        <div class="fs-5 mb-3 price-element">
+                        </div>
+                        <p class="lead desc-element"></p>
+                        <div class="d-flex" id="customForm">
+                            <input id="productID" hidden disabled>
+                            <div class="wrapper mx-2">
+                                <button class="plusminus" onclick="handleMinus()">-</button>
+                                <input type="number" class="num" value="0" id="inputQuantity" disabled />
+                                <button class="plusminus" onclick="handlePlus()">+</button>
+                            </div>
+                            <!-- <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1"
+                                style="max-width: 5rem" /> -->
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button" id="addToCart">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Related items section-->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">All products</h2>
+            <div class="input-group mb-4">
+                <!-- <input class="form-control border-end-0 border rounded-pill" type="Search for products"
+                    placeholder="search" id="example-search-input" list="products">
+                <datalist id="products">
+                </datalist> -->
+                <!-- <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5"
+                        type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </span> -->
+            </div>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 items">
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <button onclick="showToast('Test Message ')">Test</button>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Shop Cart 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="js/apiCalls.js"></script>
+    <script src="js/addToCartApiCall.js"></script>
+    <script src="js/loginApiCall.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/toast.js"></script>
+
+</body>
+
+</html>

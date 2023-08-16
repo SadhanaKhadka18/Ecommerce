@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/cart.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h4><b>Shopping Cart</b></h4>
+                        </div>
+                        <div class="col align-self-center text-right text-muted">
+                            <span class="cartCount"></span> items
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="main align-items-center">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col">
+                                Item Name
+                            </div>
+                            <div class="col">
+                                Quantity
+                            </div>
+                            <div class="col">Price
+                            </div>
+                            <div class="col">Total</div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <div class="main align-items-center" id="cartItems">
+                    </div>
+                </div>
+                <div class="back-to-shop"><a href="../index.html">&leftarrow;</a><span class="text-muted">Back to
+                        shop</span></div>
+            </div>
+            <div class="col-md-4 summary">
+                <div>
+                    <h5><b>Summary</b></h5>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">ITEMS <span class="cartCount"></span></div>
+                    <div class="col text-right">&dollar; <span id="totalPrice"></span></div>
+                </div>
+                <button class="btn" id="checkout">CHECKOUT</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <script src="../js/cart.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
