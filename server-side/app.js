@@ -5,6 +5,7 @@ const cors = require("cors");
 const productRouter = require("./routes/productRoute");
 const cartRouter = require("./routes/userCartRoute");
 const loginRouter = require("./routes/loginRoute");
+const adminRouter = require("./routes/adminRoute");
 
 app.use(express.json());
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(process.env.PRODUCTS, productRouter);
 app.use(process.env.CART, cartRouter);
 app.use(process.env.LOGIN, loginRouter);
+app.use(process.env.ADMIN, adminRouter);
 
 app.listen(process.env.PORT, () =>
   console.log(`Shopping cart listening on port ${process.env.PORT}`)

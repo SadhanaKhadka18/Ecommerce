@@ -40,6 +40,14 @@ function renderPageForAuth() {
     document.querySelector("#cartCount").innerText = 0;
     document.querySelector("#cart-icon").classList.add("d-none");
   }
+
+   // console.log(localStorage.getItem("email"))
+  const showAddProductSection = (localStorage.getItem("email") =="admin@example.com");
+  // console.log(showAddProductSection)
+  if (showAddProductSection) {
+  
+    document.getElementById('addProductSection').classList.remove('d-none');
+  }
 }
 
 function checkIfLoggedIn() {
